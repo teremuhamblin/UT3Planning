@@ -139,7 +139,7 @@ UT3Planning/
    - Couleurs par matière
    - Architecture élargie
 
->Voir : ROADMAP.md
+- Voir : ROADMAP.md
 
 ---
 
@@ -169,7 +169,7 @@ Licence à définir (MIT, Apache 2.0, GPL…)
 
 ---
 
-### 🎖️ Ton README est maintenant :
+### 🎖️ Conclusion :
 ✔ Optimisé pour ton Samsung Galaxy A7  
 ✔ Stylé, moderne, lisible  
 ✔ Sécurisé  
