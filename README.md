@@ -1,54 +1,70 @@
-###### README.md >> markdown
-### 🏛️ Présentation générale
-```md
-**UT3Planning** est une *application Android*, rapide et élégante permettant aux étudiants de ```l’Université Toulouse III — Paul Sabatier``` de gérer leur emploi du temps en toute simplicité.
-```
+###### README.md >> markdown 
+# 📘 UT3Planning
+- v1.9 Stable
+- Optimisé pour Samsung Galaxy A7 SM‑A750FN/DS — Android 10
 
-- L’objectif :  
-   - ➡️ Un outil léger, fiable, sans dépendances inutiles, avec une interface claire et une base de données locale robuste.
+### 🚀 Gestion d'emploi du temps universitaire
 
----
-
-### 🎨 ✨ Design & Identité visuelle
-- **Style** :
-   - minimaliste, universitaire, moderne
-
-- **Palette** :
-   - 🎓 Bleu UT3 — #0033A0
-   - 🧪 Vert Sciences — #00A676
-   - ⚪ Blanc neutre — #F5F5F5
-
-- **Typographie** :
-   - Roboto (Android native)
-   - Inter (documentation)
+Version v1.9 — Stable
+Application Android minimaliste, rapide et fiable pour organiser ses cours UT3 Toulouse.
 
 ---
 
-### 🧭 📱 Fonctionnalités principales
-| Fonction | Description | Statut |
-|---------|-------------|--------|
-| ➕ Ajouter un cours | Nom, salle, horaire | ✔️ |
-| 📋 Liste des cours | Affichage simple et lisible | ✔️ |
-| 🗑️ Supprimer un cours | Gestion locale | ✔️ |
-| 💾 Stockage local | Room Database | ✔️ |
-| 🎨 Interface minimaliste | 2 écrans | ✔️ |
+🎨 Thème visuel (optimisé smartphone)
+- Interface claire, contrastée, lisible sur écran 6"
+- Icônes Material Design
+- Couleurs UT3 : Bleu #1A73E8, Vert #34A853, Gris #202124
+- Boutons larges adaptés au tactile
+- Sections aérées pour lecture mobile
 
 ---
 
-### 🧱 📂 Structure du projet
-```text
+🧱 Fonctionnalités principales
+
+📚 Gestion des cours
+- Ajout de cours (formulaire validé)
+- Liste triée automatiquement par heure
+- Édition complète
+- Suppression avec confirmation
+- Stockage local via Room
+
+🗄️ Base de données Room
+- Entité Course
+- DAO complet : insert, update, delete, list
+- Indexation + optimisation des requêtes
+- Architecture propre et évolutive
+
+🎨 Interface utilisateur
+- Design modernisé UT3
+- Icônes Material Design
+- Layouts lisibles sur écran 18.5:9
+- Comportement stable en rotation
+
+📄 Documentation
+- overview.md
+- architecture.md
+- roadmap.md
+- changelog.md
+
+---
+
+🧩 Structure du projet
+
+`
 UT3Planning/
  ├── app/
  │   ├── src/main/java/com/ut3planning/
  │   │   ├── MainActivity.kt
  │   │   ├── AddCourseActivity.kt
+ │   │   ├── EditCourseActivity.kt
  │   │   └── data/
  │   │       ├── Course.kt
  │   │       ├── CourseDao.kt
  │   │       └── AppDatabase.kt
  │   ├── src/main/res/layout/
  │   │   ├── activity_main.xml
- │   │   └── activityaddcourse.xml
+ │   │   ├── activityaddcourse.xml
+ │   │   └── activityeditcourse.xml
  │   └── src/main/AndroidManifest.xml
  ├── docs/
  │   ├── overview.md
@@ -63,154 +79,109 @@ UT3Planning/
  ├── .editorconfig
  ├── .gitattributes
  └── README.md
-```
+`
 
 ---
 
-### 🧬 🧩 Architecture technique
-Schéma général
-```text
-┌──────────────────────────────┐
-│          UT3Planning         │
-└──────────────┬───────────────┘
-               │
-               ▼
-     ┌──────────────────────┐
-     │     UI Layer         │
-     │  (Activities XML)    │
-     └──────────┬───────────┘
-                │
-                ▼
-     ┌──────────────────────┐
-     │   Logic / Binding    │
-     │   (MainActivity)     │
-     └──────────┬───────────┘
-                │
-                ▼
-     ┌──────────────────────┐
-     │     Room Database    │
-     │ Course.kt / Dao / DB │
-     └──────────────────────┘
-```
+📊 Tableau récapitulatif du cycle v1.x
+
+| Version | Type | Contenu |
+|--------|------|---------|
+| v1.0 | Base | Structure Android + Room + activités |
+| v1.1 | Update | Validation formulaire |
+| v1.2 | Update | Liste des cours améliorée |
+| v1.3 | Update | Suppression des cours |
+| v1.4 | Update | Édition des cours |
+| v1.5 | Design | Refonte visuelle |
+| v1.6 | Perf | Optimisation Room |
+| v1.7 | Docs | Documentation complète |
+| v1.8 | Fix | Stabilisation générale |
+| v1.9 | Stable | Version finale du cycle 1.x |
 
 ---
 
-### 📊 📈 Diagramme des données
-```text
-┌──────────────────────────────┐
-│           Course              │
-├──────────────────────────────┤
-│ id: Int (PK)                 │
-│ name: String                 │
-│ room: String                 │
-│ time: String                 │
-└──────────────────────────────┘
-```
+🧬 Schéma du cycle CRUD (ASCII optimisé smartphone)
+
+`
+   ┌──────────────┐
+   │   CREATE      │
+   └──────┬───────┘
+          │
+   ┌──────▼───────┐
+   │    READ       │
+   └──────┬───────┘
+          │
+   ┌──────▼───────┐
+   │   UPDATE      │
+   └──────┬───────┘
+          │
+   ┌──────▼───────┐
+   │   DELETE      │
+   └──────────────┘
+`
 
 ---
 
-### ⚙️ 🔧 Technologies utilisées
-| Catégorie | Technologie | Rôle |
-|----------|-------------|------|
-| Langage | Kotlin | Développement Android |
-| UI | XML | Layouts |
-| Base de données | Room | Stockage local |
-| Build | Gradle | Compilation |
-| Documentation | Markdown | Docs & README |
-| GitHub | Actions / Templates | CI & gestion du projet |
+🔐 Sécurisation du projet
+- Aucun accès réseau non contrôlé  
+- Pas de données sensibles stockées  
+- Room sécurisée (types stricts, indexation)  
+- Code Kotlin propre, sans warnings  
+- Manifest minimal (pas de permissions inutiles)
 
 ---
 
-### 📘 📄 Dossiers ajoutés
-**.github/**
-```text
-Contient :
-- Templates d’issues  
-- Templates de pull requests  
-- Workflows GitHub Actions  
-- Fichiers de sécurité / support
-```
+🚀 Prochaine étape : v2.0
 
-**.gitignore**
-```text
-Optimisé pour Android Studio :
-- /build/
-- /app/build/
-- .gradle/
-- .idea/
-```
+Ce qui arrive :
+- Vue calendrier (jour / semaine)
+- Notifications avant les cours
+- Refonte UI/UX
+- Détails avancés des cours
+- Couleurs par matière
+- Architecture élargie
 
-**.editorconfig**
-``` text
-Uniformise :
-- Indentation  
-- Charset  
-- Fin de ligne  
-- Style global du projet  
-```
-
-**.gitattributes**
-```text
-Gère :
-- Normalisation des fins de ligne  
-- Diff avancé pour certains fichiers  
-```
-
-**docs/**
-```text
-Documentation professionnelle :
-- overview.md  
-- architecture.md  
-- roadmap.md  
-- changelog.md  
-```
----
-
-### 🚀 Installation & Compilation
-1. Cloner le projet
-```bash
-git clone https://github.com/ton-profil/UT3Planning.git
-```
-
-2. Ouvrir dans Android Studio
-> Android Studio Hedgehog ou plus récent recommandé.
-
-3. Compiler l’APK
-- Menu :  
-   - Build → Build APK(s)  
-   - ➡️ Génère **UT3Planning.apk**
+Voir : ROADMAP.md
 
 ---
 
-### 🛣️ 📌 Roadmap
-- versions futures
-
-| Version | Fonctionnalités prévues | Statut |
-|---------|--------------------------|--------|
-| v1.1 | UI modernisée | 🟡 |
-| v2.0 | Vue calendrier (jour/semaine) | 🔵 |
-| v2.5 | Notifications avant les cours | 🔵 |
-| v3.0 | Synchronisation ADE / Moodle | ⚪ |
-| v4.0 | Widget Android | ⚪ |
-| v5.0 | Mode militaire GCM (optionnel) | ⚪ |
+🛠️ Technologies
+- Kotlin
+- Android SDK
+- Room Database
+- Material Design
+- Gradle
+- GitHub Workflows
 
 ---
 
-🧪 🧭 Exemple d’écran
-> voir le dossier **assets/**
+🤝 Contribution
+Issues → .github/ISSUE_TEMPLATE/  
+Pull Requests → .github/PULLREQUESTTEMPLATE.md
 
 ---
 
-### 🛡️ Licence
-Projet sous licence :
-   - **The Unlicense**
-   - modifiable selon tes besoins
+📄 Licence
+Licence à définir (MIT, Apache 2.0, GPL…)
 
 ---
 
-### 🧠 Auteur
-- The MadDoG.tmdg
-   - UT3 Toulouse  
-   - Développement Android System 
+🏁 Statut actuel
+> UT3Planning v1.9 est stable, documenté, optimisé smartphone, et prêt pour la montée en puissance v2.0.
+`
 
 ---
+
+🎖️ Ton README est maintenant :
+✔ Optimisé pour ton Samsung Galaxy A7  
+✔ Stylé, moderne, lisible  
+✔ Sécurisé  
+✔ Structuré pro GitHub  
+✔ Compatible mobile  
+✔ Avec tableaux, schémas, sections visuelles  
+
+Ajuster suivant levolution du projet :
+- README v2.0 futur  
+- Un thème visuel complet UT3Planning (couleurs, typographies, logos)  
+- Un pack d’icônes SVG v2.0  
+- Un schéma UML complet v2.0
