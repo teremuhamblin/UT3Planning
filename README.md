@@ -1,16 +1,16 @@
 ###### README.md >> markdown 
 # 📘 UT3Planning
 - v1.9 Stable
-- Optimisé pour Samsung Galaxy A7 SM‑A750FN/DS — Android 10
+- Optimisé pour :
+   - Samsung Galaxy A7 SM‑A750FN/DS — Android 10
 
 ### 🚀 Gestion d'emploi du temps universitaire
-
-Version v1.9 — Stable
-Application Android minimaliste, rapide et fiable pour organiser ses cours UT3 Toulouse.
+- Version v1.9 — Stable
+   - Application Android, rapide et fiable pour organiser ses cours UT3 Toulouse.
 
 ---
 
-🎨 Thème visuel (optimisé smartphone)
+### 🎨 Thème visuel (optimisé smartphone)
 - Interface claire, contrastée, lisible sur écran 6"
 - Icônes Material Design
 - Couleurs UT3 : Bleu #1A73E8, Vert #34A853, Gris #202124
@@ -19,8 +19,7 @@ Application Android minimaliste, rapide et fiable pour organiser ses cours UT3 T
 
 ---
 
-🧱 Fonctionnalités principales
-
+### 🧱 Fonctionnalités principales
 📚 Gestion des cours
 - Ajout de cours (formulaire validé)
 - Liste triée automatiquement par heure
@@ -48,9 +47,8 @@ Application Android minimaliste, rapide et fiable pour organiser ses cours UT3 T
 
 ---
 
-🧩 Structure du projet
-
-`
+### 🧩 Structure du projet
+```text
 UT3Planning/
  ├── app/
  │   ├── src/main/java/com/ut3planning/
@@ -79,11 +77,12 @@ UT3Planning/
  ├── .editorconfig
  ├── .gitattributes
  └── README.md
-`
+```
 
 ---
 
-📊 Tableau récapitulatif du cycle v1.x
+### 📊 Tableau récapitulatif
+   - du cycle v1.x
 
 | Version | Type | Contenu |
 |--------|------|---------|
@@ -100,9 +99,9 @@ UT3Planning/
 
 ---
 
-🧬 Schéma du cycle CRUD (ASCII optimisé smartphone)
-
-`
+### 🧬 Schéma
+   - du cycle CRUD (ASCII optimisé smartphone)
+```text
    ┌──────────────┐
    │   CREATE      │
    └──────┬───────┘
@@ -118,11 +117,11 @@ UT3Planning/
    ┌──────▼───────┐
    │   DELETE      │
    └──────────────┘
-`
+````
 
 ---
 
-🔐 Sécurisation du projet
+### 🔐 Sécurisation du projet
 - Aucun accès réseau non contrôlé  
 - Pas de données sensibles stockées  
 - Room sécurisée (types stricts, indexation)  
@@ -131,21 +130,20 @@ UT3Planning/
 
 ---
 
-🚀 Prochaine étape : v2.0
+### 🚀 Prochaine étape : v2.0
+- Ce qui arrive :
+   - Vue calendrier (jour / semaine)
+   - Notifications avant les cours
+   - Refonte UI/UX
+   - Détails avancés des cours
+   - Couleurs par matière
+   - Architecture élargie
 
-Ce qui arrive :
-- Vue calendrier (jour / semaine)
-- Notifications avant les cours
-- Refonte UI/UX
-- Détails avancés des cours
-- Couleurs par matière
-- Architecture élargie
-
-Voir : ROADMAP.md
+>Voir : ROADMAP.md
 
 ---
 
-🛠️ Technologies
+### 🛠️ Technologies
 - Kotlin
 - Android SDK
 - Room Database
@@ -155,24 +153,23 @@ Voir : ROADMAP.md
 
 ---
 
-🤝 Contribution
-Issues → .github/ISSUE_TEMPLATE/  
-Pull Requests → .github/PULLREQUESTTEMPLATE.md
+### 🤝 Contribution
+- Issues → .github/ISSUE_TEMPLATE/  
+- Pull Requests → .github/PULLREQUESTTEMPLATE.md
 
 ---
 
-📄 Licence
+### 📄 Licence
 Licence à définir (MIT, Apache 2.0, GPL…)
 
 ---
 
-🏁 Statut actuel
+### 🏁 Statut actuel
 > UT3Planning v1.9 est stable, documenté, optimisé smartphone, et prêt pour la montée en puissance v2.0.
-`
 
 ---
 
-🎖️ Ton README est maintenant :
+### 🎖️ Ton README est maintenant :
 ✔ Optimisé pour ton Samsung Galaxy A7  
 ✔ Stylé, moderne, lisible  
 ✔ Sécurisé  
