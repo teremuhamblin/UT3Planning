@@ -1,0 +1,9 @@
+# Normalize line endings
+* text=auto
+
+# Improve diffs for Kotlin & XML
+*.kt diff=java
+*.xml diff=xml
+
+# Markdown
+*.md text
