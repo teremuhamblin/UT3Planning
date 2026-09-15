@@ -1,21 +1,26 @@
 ###### README.md >> markdown
-
 ### 🏛️ Présentation générale
+```md
 **UT3Planning** est une *application Android*, rapide et élégante permettant aux étudiants de ```l’Université Toulouse III — Paul Sabatier``` de gérer leur emploi du temps en toute simplicité.
+```
+
 - L’objectif :  
-➡️ Un outil léger, fiable, sans dépendances inutiles, avec une interface claire et une base de données locale robuste.
+   - ➡️ Un outil léger, fiable, sans dépendances inutiles, avec une interface claire et une base de données locale robuste.
 
 ---
 
 ### 🎨 ✨ Design & Identité visuelle
-- **Style** : minimaliste, universitaire, moderne  
+- **Style** :
+   - minimaliste, universitaire, moderne
+
 - **Palette** :
-  - 🎓 Bleu UT3 — #0033A0
-  - 🧪 Vert Sciences — #00A676
-  - ⚪ Blanc neutre — #F5F5F5
+   - 🎓 Bleu UT3 — #0033A0
+   - 🧪 Vert Sciences — #00A676
+   - ⚪ Blanc neutre — #F5F5F5
+
 - **Typographie** :
-  - Roboto (Android native)
-  - Inter (documentation)
+   - Roboto (Android native)
+   - Inter (documentation)
 
 ---
 
@@ -118,38 +123,47 @@ Schéma général
 
 ### 📘 📄 Dossiers ajoutés
 **.github/**
+```text
 Contient :
 - Templates d’issues  
 - Templates de pull requests  
 - Workflows GitHub Actions  
-- Fichiers de sécurité / support  
+- Fichiers de sécurité / support
+```
 
 **.gitignore**
+```text
 Optimisé pour Android Studio :
 - /build/
 - /app/build/
 - .gradle/
 - .idea/
+```
 
 **.editorconfig**
+``` text
 Uniformise :
 - Indentation  
 - Charset  
 - Fin de ligne  
 - Style global du projet  
+```
 
 **.gitattributes**
+```text
 Gère :
 - Normalisation des fins de ligne  
 - Diff avancé pour certains fichiers  
+```
 
 **docs/**
+```text
 Documentation professionnelle :
 - overview.md  
 - architecture.md  
 - roadmap.md  
 - changelog.md  
-
+```
 ---
 
 ### 🚀 Installation & Compilation
@@ -164,11 +178,12 @@ git clone https://github.com/ton-profil/UT3Planning.git
 3. Compiler l’APK
 - Menu :  
    - Build → Build APK(s)  
-➡️ Génère **UT3Planning.apk**
+   - ➡️ Génère **UT3Planning.apk**
 
 ---
 
-### 🛣️ 📌 Roadmap (versions futures)
+### 🛣️ 📌 Roadmap
+- versions futures
 
 | Version | Fonctionnalités prévues | Statut |
 |---------|--------------------------|--------|
@@ -182,20 +197,20 @@ git clone https://github.com/ton-profil/UT3Planning.git
 ---
 
 🧪 🧭 Exemple d’écran
-
+> voir le dossier **assets/**
 
 ---
 
 ### 🛡️ Licence
 Projet sous licence :
-**The Unlicense**
+   - **The Unlicense**
    - modifiable selon tes besoins
 
 ---
 
 ### 🧠 Auteur
-The MadDoG.tmdg
-- UT3 Toulouse  
+- The MadDoG.tmdg
+   - UT3 Toulouse  
    - Développement Android System 
 
 ---
